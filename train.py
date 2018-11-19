@@ -50,7 +50,7 @@ def trainloop(module, lr=0.01, train_epochs=50):
 		
 
 	# Save the model checkpoint
-	torch.save(module.state_dict(), 'pre-trained/weights.pth')
+	torch.save(module.state_dict(), 'weights.pth')
 
 def main():
 

@@ -1,16 +1,19 @@
 # Estimate Outdoor Illumination on Dash-cam images #
 A re-implemented project which focus on dash-cam images
-according to the paper (Deep Outdoor Illumination Estimation [Hold-Geoffroy et al. CVPR 2017]). 
+according to the paper (Deep Outdoor Illumination Estimation [Hold-Geoffroy et al. CVPR 2017]) ([https://arxiv.org/abs/1611.06403](https://arxiv.org/abs/1611.06403)). 
 This project is an end-to-end system that outputs corresponding sun position and physcial 
 sky, camera parameters by inputing single dash-cam image.
 
 <img src="teaser.png" width="700" />
 
 ## Quick start ##
+### Download weights ###
+You can download the weights from [here](https://140.114.79.124:5001/sharing/1nsU3hesP)
+
 ### Test ###
 If you want to test your own image, run this command:
 ```bash
-python inference.py --img_path <image-path>
+python inference.py --img_path <image-path> --pre-trained <weight-path>
 ```
 
 ### Training ###
@@ -21,10 +24,14 @@ After generating dataset, run command below for training:
 ```bash
 python train.py
 ```
-The trained weights will be stored in ''pre-trained'' folder (**It will replace original weights!**)
+The trained weights will be stored as weights.pth .
 
 ### Evaluation ###
-Evaluate the trained model by executing ```eval.py```, it will output the average error of each predictions.
+Evaluate the trained model on the test dataset (```data/test_list.csv```), it will output the average error of each predictions.
+
+```bash
+python eval.py --pre-trained <weight-path>
+```
 
 ## Dependecies ##
 * numpy
