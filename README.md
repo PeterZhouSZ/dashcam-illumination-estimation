@@ -24,7 +24,7 @@ After generating dataset, run command below for training:
 ```bash
 python train.py
 ```
-The trained weights will be stored as weights.pth .
+The trained weights will be stored as ```weights.pth``` .
 
 ### Evaluation ###
 Evaluate the trained model on the test dataset (```data/test_list.csv```), it will output the average error of each predictions.
