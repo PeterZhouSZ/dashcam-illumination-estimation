@@ -8,7 +8,7 @@ sky, camera parameters by inputing single dash-cam image.
 
 ## Quick start ##
 ### Download weights ###
-You can download the weights from [here](https://140.114.79.124:5001/sharing/1nsU3hesP)
+You can download the weights from [here](https://drive.google.com/file/d/1PPQEaYcIJ7l6lfa0FA9z-U1ngxc0wIQQ/view?usp=sharing)
 
 ### Test ###
 If you want to test your own image, run this command:
